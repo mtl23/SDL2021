@@ -11,6 +11,37 @@
 #include "init.h"
 #include"graphics.h"
 
+////TO DO
+/*
+
+1  implememnt entity system
+2  test spritefreeAll() and get it working
+3  add sprite free all to init()
+4  begin baasic player entity
+5  begin pointer funtions implentation on the player entity
+6  test and make sure pointer function work in the loop (draw,think,update,free)
+7  glib test/implement
+8  jansson test/implement
+9  screen scrolling
+
+
+
+//at this point you may begin and start to understand
+// "mode 7 rendering"
+
+
+
+?? import chipmunk/phyiscs (research)
+?? ^^implment (touch) for an entities
+??? HUD
+??? Music
+??? Title screen
+??  Obstacles
+??  AI
+??  Multiple tracks
+*/
+
+
 
 //The window we'll be rendering to
 SDL_Window* gWindow = NULL;
