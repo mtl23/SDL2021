@@ -20,8 +20,8 @@ SDL_Renderer* gRenderer = NULL;
 SDL_Surface* gScreenSurface = NULL;
 //The image we will load and show on the screen
 SDL_Surface* gHelloWorld = NULL;
-SDL_Event g_e;
-int done = 0;
+
+
 const Uint8* keys;
 int main(int argc, char* args[])
 {
@@ -36,31 +36,30 @@ int main(int argc, char* args[])
 		printf("Failed to initialize!\n");
 	}
 	Sprite_M* balls = spriteLoad("m7_map.png", 512, 512);
+	//Main loop flag
+	int done = 0;
+	//Event handler
+	SDL_Event e;
+
+
 
 	// the main game loop
-	//do
-	//{
+	do
+	{
 	SDL_RenderClear(gRenderer);
 	spriteDraw(balls, gRenderer, 0, Init_car_position);
 
 
 
+	//const Uint8* currentKeyStates = SDL_GetKeyboardState( NULL );
 
-
-
-	//Main loop flag
-	bool quit = false;
-	//Event handler
-	SDL_Event e;
-	while (!quit)
-	{
-		//Handle events on queue
+			//Handle events on queue
 		while (SDL_PollEvent(&e) != 0)
 		{
 			//User requests quit
 			if (e.type == SDL_QUIT)
 			{
-				quit = true;
+				done = 1;
 			}
 			//User presses a key
 			else if (e.type == SDL_KEYDOWN)
@@ -74,17 +73,18 @@ int main(int argc, char* args[])
 
 				case SDLK_DOWN:
 					slog("down");
-
 					break;
 
 				case SDLK_LEFT:
 					slog("left");
-
 					break;
 
 				case SDLK_RIGHT:
 					slog("right");
+					break;
 
+				case SDLK_ESCAPE:
+					done = 1;					
 					break;
 
 				default:
@@ -92,14 +92,10 @@ int main(int argc, char* args[])
 				}
 			}
 		}
-
-
 	
 	NextFrame();
 
-    }
-
-//	} while (!done);
+    }while (!done);
 
 //FREE UP EVERYTHING HERE
 	//Free resources and close SDL
