@@ -77,7 +77,6 @@ extern int entityMax;
 
 			//load glib
 			// chipmunk
-		// Initialize graphics
 
 			//Create window
 			SDL_CreateWindowAndRenderer(SCREEN_WIDTH, SCREEN_HEIGHT, SDL_WINDOW_RESIZABLE, &gWindow, &gRenderer);

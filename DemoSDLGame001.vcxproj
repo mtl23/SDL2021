@@ -153,6 +153,7 @@
     <ClCompile Include="init.cpp" />
     <ClCompile Include="MainGame.cpp" />
     <ClCompile Include="map.cpp" />
+    <ClCompile Include="player.cpp" />
     <ClCompile Include="simple_logger.cpp" />
     <ClCompile Include="sprite.cpp" />
     <ClCompile Include="vector.cpp" />
@@ -163,6 +164,7 @@
     <ClInclude Include="graphics.h" />
     <ClInclude Include="init.h" />
     <ClInclude Include="map.h" />
+    <ClInclude Include="player.h" />
     <ClInclude Include="simple_logger.h" />
     <ClInclude Include="sprite.h" />
     <ClInclude Include="vector.h" />

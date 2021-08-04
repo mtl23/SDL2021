@@ -14,7 +14,9 @@
 ////TO DO
 /*
 
-1  implememnt entity system
+REFACTOR WHENEVER POSSIBLE (player,background,map)
+
+1  implememnt entity system and MAP system.
 2  test spritefreeAll() and get it working
 3  add sprite free all to init()
 4  begin baasic player entity
@@ -71,7 +73,7 @@ int main(int argc, char* args[])
 	int done = 0;
 	//Event handler
 	SDL_Event e;
-
+	//the player entity
 
 
 	// the main game loop
