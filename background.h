@@ -20,7 +20,7 @@ typedef struct
 {
 
 	char bg_name[24];
-	Sprite_M* sky;
+	Sprite_S* sky;
 
 }Background_M;
 

@@ -3,6 +3,7 @@
 
 #include "vector.h"
 #include "sprite.h"
+#include "simple_logger.h"
 
 
 /**
@@ -18,12 +19,12 @@
 *@param segNum the segment number the entity is on the map as an int
 */
 
-typedef struct
+typedef struct Entity_S
 
 {
 	int inuse;
 	char name[32];
-	Sprite_M* image;
+	Sprite_S* sprite;
 	Vector2D position;
 	int next_think;/**time index for next_think*/
 	int think_rate; /**how often to run think*/
@@ -32,7 +33,7 @@ typedef struct
 	void(*update) (struct Entity_S* self); /**physics*<*/
 	void(*touch) (struct Entity_S* self, struct Entity_S* other); /**collsions*<*/
 	void(*free) (struct Entity_S* self); /**cleanup function call on free*<*/
-}Entiy_M;
+}Entity_S;
 
 
 
@@ -41,7 +42,7 @@ typedef struct
 *
 *@brief creates the entity system should be used once at game start
 */
-void InitEntitySystem(int EntityMax);
+bool InitEntitySystem(int EntityMax);
 /**
 *
 *@brief closes the entity system should be used once at game end

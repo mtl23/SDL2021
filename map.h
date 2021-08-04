@@ -23,7 +23,7 @@ typedef struct
 {
 
 	char bg_name[24];
-	Sprite_M* floor;// this should be an entity
+	Sprite_S* floor;// this should be an entity
 	Background_M* bg_sky;
 }Map_M;
 

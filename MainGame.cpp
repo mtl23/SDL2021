@@ -35,7 +35,7 @@ int main(int argc, char* args[])
 	{
 		printf("Failed to initialize!\n");
 	}
-	Sprite_M* balls = spriteLoad("m7_map.png", 512, 512);
+	Sprite_S* balls = spriteLoad("m7_map.png", 512, 512);
 	//Main loop flag
 	int done = 0;
 	//Event handler

@@ -43,7 +43,7 @@ typedef struct
 	int framesPerLine;
 	Vector3D color;
 
-}Sprite_M;
+}Sprite_S;
 
 
 /**
@@ -66,7 +66,7 @@ void CloseSpriteSystem();
 *@param sizeX: the final height of the sprite when its drawn
 *@return Sprite_M: returns a Sprite_M object so that it can be saved for later. This is necessary to use spriteDraw()
 */
-Sprite_M* spriteLoad(const char* filename, int sizeX, int sizeY);
+Sprite_S* spriteLoad(const char* filename, int sizeX, int sizeY);
 
 
 
@@ -76,6 +76,6 @@ Sprite_M* spriteLoad(const char* filename, int sizeX, int sizeY);
  @param *sprite: pointer to the sprite that you wish to free
 */
 
-void spriteDraw(Sprite_M* sprite, SDL_Renderer* renderer, int frame, Vector2D position);
-void spriteFree(Sprite_M* sprite);
+void spriteDraw(Sprite_S* sprite, SDL_Renderer* renderer, int frame, Vector2D position);
+void spriteFree(Sprite_S* sprite);
 #endif

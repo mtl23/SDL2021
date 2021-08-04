@@ -12,20 +12,20 @@ extern SDL_Window* gWindow;
 extern SDL_Surface* temp;
 extern SDL_Renderer* gRenderer;
 
-Sprite_M* spriteList = NULL;
+Sprite_S* spriteList = NULL;
 int numSprites = 0;
 int spriteMax = 100;
 
 bool InitSpriteSystem()
 {
-	spriteList = (Sprite_M*)malloc(sizeof(Sprite_M) * (spriteMax));
+	spriteList = (Sprite_S*)malloc(sizeof(Sprite_S) * (spriteMax));
 
 	if (spriteList == NULL)
 	{
 		//slog("failed to initialize sprite system. STILL NULL");
 		return false;
 	}
-	memset(spriteList, 0, sizeof(Sprite_M) * (spriteMax));
+	memset(spriteList, 0, sizeof(Sprite_S) * (spriteMax));
 	//slog("sprite system is go");
 	return true;
 }
@@ -51,7 +51,7 @@ void CloseSpriteSystem()
 	spriteMax = 0;
 }
 
-Sprite_M* spriteLoad(const char* filename, int sizeX, int sizeY)
+Sprite_S* spriteLoad(const char* filename, int sizeX, int sizeY)
 {
 	int i;
 	SDL_Surface* temp;
@@ -115,7 +115,7 @@ Sprite_M* spriteLoad(const char* filename, int sizeX, int sizeY)
 	return &spriteList[i];
 }
 
-void spriteFree(Sprite_M* sprite)
+void spriteFree(Sprite_S* sprite)
 {
 	/*first lets check to see if the sprite is still being used.*/
 	sprite->refcount--;
@@ -133,7 +133,7 @@ void spriteFree(Sprite_M* sprite)
 	sprite = NULL;
 
 }
-void spriteDraw(Sprite_M* sprite, SDL_Renderer* renderer, int frame, Vector2D position)
+void spriteDraw(Sprite_S* sprite, SDL_Renderer* renderer, int frame, Vector2D position)
 {
 
 

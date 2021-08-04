@@ -7,6 +7,7 @@
 #include "SDL_ttf.h"
 #include "SDL_mixer.h" 
 #include "simple_logger.h"
+#include "entity.h"
 
 //The window we'll be rendering to
 extern SDL_Window* gWindow;
@@ -17,6 +18,7 @@ extern SDL_Renderer* gRenderer;
 //The surface contained by the window
 extern SDL_Surface* gScreenSurface;
 
+extern int entityMax;
 
 
 
@@ -55,7 +57,10 @@ extern SDL_Surface* gScreenSurface;
 				printf("Falied to load sprite system");
 				success = false;
 			}
-
+			if (!InitEntitySystem(entityMax))
+			{
+			
+			}
 
 			// Initialize fonts
 			if (TTF_Init() == -1)
@@ -72,7 +77,6 @@ extern SDL_Surface* gScreenSurface;
 
 			//load glib
 			// chipmunk
-		// Initialize entity system
 		// Initialize graphics
 
 			//Create window
@@ -97,10 +101,18 @@ extern SDL_Surface* gScreenSurface;
 
 }
 
+
+
+
+
+
  void close()
  {
 	
-		
+		//close Entity System
+	     CloseEntitySystem();
+		 //close Sprite System
+		 CloseSpriteSystem();
 		 //Destroy window
 		 SDL_DestroyWindow(gWindow);
 		 gWindow = NULL;
