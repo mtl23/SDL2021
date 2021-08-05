@@ -1,15 +1,7 @@
-﻿  entity.cpp
-C:\DemoSDLGame001\entity.cpp(96,64): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\DemoSDLGame001\entity.cpp(96,52): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-  graphics.cpp
-  init.cpp
-  MainGame.cpp
-  sprite.cpp
-C:\DemoSDLGame001\sprite.cpp(148,19): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-C:\DemoSDLGame001\sprite.cpp(149,19): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-  vector.cpp
-C:\DemoSDLGame001\vector.cpp(33,13): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
-C:\DemoSDLGame001\vector.cpp(37,13): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
+﻿  MainGame.cpp
+  backgound.cpp
+  map.cpp
   Generating Code...
-C:\DemoSDLGame001\entity.cpp(75): warning C4715: 'EntityNew': not all control paths return a value
+C:\DemoSDLGame001\map.cpp(45): warning C4172: returning address of local variable or temporary: temp
+C:\DemoSDLGame001\backgound.cpp(27): warning C4172: returning address of local variable or temporary: temp
   DemoSDLGame001.vcxproj -> C:\DemoSDLGame001\x64\Debug\DemoSDLGame001.exe

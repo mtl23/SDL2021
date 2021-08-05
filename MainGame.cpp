@@ -9,6 +9,7 @@
 #include "SDL_mixer.h" 
 #include "simple_logger.h"
 #include "init.h"
+#include"map.h"
 #include"graphics.h"
 
 ////TO DO
@@ -59,28 +60,42 @@ const Uint8* keys;
 int main(int argc, char* args[])
 {
 
-	Vector2D Init_car_position;
-	Init_car_position.x = 0;
-	Init_car_position.y = 0;
+	//Vector2D Init_map_position;// refactor for map position
+	//Init_map_position.x = 0;// refactor for map position
+	//Init_map_position.y = 150;// refactor for map position
+
+
+
 
 	//Start up SDL and create window
 	if (!init())
 	{
 		printf("Failed to initialize!\n");
 	}
-	Sprite_S* balls = spriteLoad("m7_map.png", 512, 512);
+
+
+	//Sprite_S* balls = spriteLoad("PNG/m7_map.png", 512, 512);
+	// 
+	// 
+	// 
 	//Main loop flag
 	int done = 0;
 	//Event handler
 	SDL_Event e;
+	// the map entity
+	Map_S* M0deS3v3n = mapLoad("PNG/m7_map.png", 512, 512, "PNG/bg2.png",2048,150);
+	 
 	//the player entity
 
-
+	Vector2D Init_map_position;
+	Init_map_position.x = 0;
+	Init_map_position.y = 150;
+	
 	// the main game loop
 	do
 	{
 	SDL_RenderClear(gRenderer);
-	spriteDraw(balls, gRenderer, 0, Init_car_position);
+	spriteDraw(M0deS3v3n->MAP->sprite, gRenderer, 0, Init_map_position);// TOD DO GET THIS WORKING!!! REFACTOR TO A MAP
 
 
 

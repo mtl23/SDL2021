@@ -29,9 +29,9 @@ extern int entityMax;
 
 	
 	//Screen dimension constants
+	 const int SCREEN_HEIGHT_OFFSET = 150;//revert to zero
 	const int SCREEN_WIDTH = 512;
-	const int SCREEN_HEIGHT = 512;
-
+	const int SCREEN_HEIGHT = 512+ SCREEN_HEIGHT_OFFSET;
 
 
 		//Initialization flag

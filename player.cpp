@@ -11,23 +11,23 @@
 
 
 
-
-Player_S* PlayerInit() 
-{
-
-
-}
-
-
-void PlayerFree(Player_S** player)
-{
-
-
-}
-
-
-void PlayerChangeEntity(Player_S* player, Entity_S* entity)
-{
-
-
-}
+//
+//Player_S* PlayerInit() 
+//{
+//
+//
+//}
+//
+//
+//void PlayerFree(Player_S** player)
+//{
+//
+//
+//}
+//
+//
+//void PlayerChangeEntity(Player_S* player, Entity_S* entity)
+//{
+//
+//
+//}

@@ -5,6 +5,7 @@
 #include <SDL_image.h>
 #include"sprite.h"
 #include"vector.h"
+#include "simple_logger.h"
 
 
 
@@ -15,11 +16,11 @@
 *@param Sprite_M the refrecnce to a Sprite object to be used
 */
 
-typedef struct
+typedef struct Background_M
 
 {
 
-	char bg_name[24];
+	 char bg_name[24];
 	Sprite_S* sky;
 
 }Background_M;
@@ -32,7 +33,7 @@ typedef struct
 *@param SizeY: the final height of the background when it's drawn
 *@return Background_M: returns a Background_M object so that it can be saved for later. This is necessary to use backgroundDraw()
 */
-Background_M backgroundLoad(char* filename, int SizeX, int SizeY);
+Background_M* backgroundLoad(const char* filename, int SizeX, int SizeY);
 
 /**
 *

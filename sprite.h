@@ -28,7 +28,7 @@
 
 
 
-typedef struct
+typedef struct Sprite_S
 
 {
 	int refcount;
