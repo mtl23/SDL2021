@@ -76,6 +76,7 @@ extern int entityMax;
 			}
 
 			//load glib
+		    //jannson
 			// chipmunk
 
 			//Create window

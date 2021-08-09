@@ -20,7 +20,7 @@ REFACTOR WHENEVER POSSIBLE (player,background,map)
 1  implememnt entity system and MAP system.
 2  test spritefreeAll() and get it working
 3  add sprite free all to init()
-4  begin baasic player entity
+4  begin basic player entity
 5  begin pointer funtions implentation on the player entity
 6  test and make sure pointer function work in the loop (draw,think,update,free)
 7  glib test/implement
@@ -84,7 +84,7 @@ int main(int argc, char* args[])
 	SDL_Event e;
 	// the map entity
 	Map_S* M0deS3v3n = mapLoad("PNG/m7_map.png", 512, 512, "PNG/bg2.png",2048,150);
-	 
+	//Sprite_S* map = spriteLoad("PNG/m7_map.png", 512, 512);
 	//the player entity
 
 	Vector2D Init_map_position;
@@ -95,8 +95,9 @@ int main(int argc, char* args[])
 	do
 	{
 	SDL_RenderClear(gRenderer);
-	spriteDraw(M0deS3v3n->MAP->sprite, gRenderer, 0, Init_map_position);// TOD DO GET THIS WORKING!!! REFACTOR TO A MAP
+	spriteDraw(M0deS3v3n->MAP->sprite, gRenderer, 0, Init_map_position);// TODO GET THIS WORKING!!! REFACTOR TO A MAP
 
+	//spriteDraw(map, gRenderer, 0, Init_map_position);// TODO GET THIS WORKING!!! REFACTOR TO A MAP
 
 
 	//const Uint8* currentKeyStates = SDL_GetKeyboardState( NULL );

@@ -33,6 +33,7 @@ Map_S* mapLoad(const char* filename, int SizeX, int SizeY, const char* bgfilenam
 	}
 
 	temp.bg_sky = backgroundLoad(bgfilename, bgSizeX, bgSizeY); // the sky
+	strncpy_s(temp.bg_name, bgfilename, 20);
 
 	if (temp.bg_sky==NULL)
 	{
